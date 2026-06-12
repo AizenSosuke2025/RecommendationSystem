@@ -1,18 +1,18 @@
-# 🍿 Netflix Prize Recommendation Engine: A Hybrid Deep Learning Architecture
+# Netflix Prize Recommendation Engine: A Hybrid Deep Learning Architecture
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![PyTorch](https://img.shields.io/badge/PyTorch-Deep_Learning-EE4C2C.svg)
 ![SciPy](https://img.shields.io/badge/SciPy-Matrix_Factorization-8CAAE6.svg)
 ![Pandas](https://img.shields.io/badge/Pandas-Data_Processing-150458.svg)
 
-## 📌 Overview
+## Overview
 This repository contains a full-scale recommendation system built on the legendary **Netflix Prize Dataset** (100M+ ratings). The goal of this project is to solve the problem of information overload by predicting user movie affinities and generating personalized Top-K lists. 
 
 The primary technical challenge addressed in this project is the **Cold Start Problem** and extreme matrix sparsity. To handle this, the system utilizes a fault-tolerant **"Waterfall Architecture,"** routing data through advanced Deep Learning models, Collaborative Filtering matrices, and Content-Based text engines to ensure 100% prediction coverage without system crashes.
 
 ---
 
-## 🏗️ System Architecture: The Waterfall Pipeline
+## System Architecture: The Waterfall Pipeline
 
 Standard Collaborative Filtering models mathematically collapse when encountering brand-new users or movies (Cold Starts). This system circumvents that by using a multi-tiered fallback pipeline during inference:
 
@@ -28,7 +28,7 @@ Standard Collaborative Filtering models mathematically collapse when encounterin
 
 ---
 
-## 📊 Dataset & Preprocessing
+## Dataset & Preprocessing
 The model is trained on the official Netflix Prize dataset. 
 * **Scale:** Over 100,000,000 individual ratings across 17,000+ movies.
 * **Sparsity:** ~99% sparse matrix.
@@ -38,7 +38,7 @@ The model is trained on the official Netflix Prize dataset.
 
 ---
 
-## 🚀 How to Run & Reproduce
+## How to Run & Reproduce
 
 ### 1. Environment Setup
 This pipeline was designed to be run in **Google Colab** to utilize free GPU acceleration for the PyTorch NCF model.
@@ -46,7 +46,7 @@ This pipeline was designed to be run in **Google Colab** to utilize free GPU acc
 2. Clone this repository into your Colab environment or run the notebooks directly.
 
 ### 2. Execution
-The main pipeline is contained in the unified script. Once the environment is initialized and models are trained, you can interact with the engine using two primary functions:
+The main pipeline is contained in the unified NCF-SVD-Hybrid script. Once the environment is initialized and models are trained, you can interact with the engine using two primary functions:
 
 ```python
 # Predict a specific user's rating for a specific movie (1-5 Stars)
